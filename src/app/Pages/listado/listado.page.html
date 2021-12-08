@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar  class="center">
+
+    <ion-button color="primary" size="small" slot="start" mode="md">
+      <ion-back-button></ion-back-button>
+    </ion-button>
+
+    <ion-title >
+      TeLlevo
+    </ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content  padding class = "background" [fullscreen]="true">
+
+  <div>
+    <img src='/assets/icon/duoc.jpg' id="duoc">
+  </div>
+
+  <ngx-spinner bdColor="rgba(51,51,51,0.8)" size="medium" color="#fff" type="ball-scale-multiple">
+    <p style="font-size: 20px; color: white">Cargando...</p>
+  </ngx-spinner>
+    
+  <div class="ion-padding-vertical">
+    <ion-card id = "carta" class="ion-text-center">
+      <ion-card-content >
+        <form *ngFor = "let u of agendas" >
+          <mat-expansion-panel id = "expansion"  hideToggle >
+            <mat-expansion-panel-header>
+              <mat-panel-title> 
+               {{u.strDestino}} 
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <p id = "pe">Conductor: {{u.strConductor}}.</p> 
+            <br>
+            <p id = "pe">Hora de Salida: {{u.strHora}}.</p>
+            <br>
+            <p id = "pe">Numero: {{u.strNro}}.</p>
+            <br>
+            <p id = "pe">Marca: {{u.strMarca_auto}}.</p>
+            <br>
+            <p id = "pe">Patente: {{u.strPatente}}.</p>
+            <br>
+            <p id = "pe">Precio: ${{u.strPrecio}}.</p>
+            <br>
+            <ion-button  >Agendar</ion-button>
+          </mat-expansion-panel>
+          <br>
+        </form>  
+      </ion-card-content>
+
+    </ion-card>
+  </div>
+   
+</ion-content>
+<app-footer class="ion-text-center"></app-footer>

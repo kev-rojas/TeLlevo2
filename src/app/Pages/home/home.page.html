@@ -1,0 +1,59 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="ion-padding-top ion-text-center">
+      TeLlevo
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding class = "background" [fullscreen]="true">
+  <div>
+    <img src='/assets/icon/duoc.jpg' id="duoc">
+  </div>
+  <form [formGroup]="signinForm">
+    <div class="ion-padding-vertical">
+      <ion-card class="ion-text-center" id= "carta" #animar>
+        <ion-card-title>
+          <ion-label>
+            <h3 id = "letras">Bienvenido!</h3>
+          </ion-label>
+        </ion-card-title>
+  
+        <ion-card-content>
+          
+          <mat-form-field appearance="legacy">
+              <mat-label id = "letras">Usuario</mat-label>
+              <input id = "campoLetra" matInput type="text" [(ngModel)]="usuario_login.id_usuario" formControlName="usuario">
+           </mat-form-field>
+          
+           
+            <mat-form-field appearance="legacy">
+              <mat-label id = "letras">Password</mat-label>
+              <input id = "campoLetra" [(ngModel)]="usuario_login.id_password" matInput [type]="hide ? 'password' : 'text'" formControlName="contraseña" minlength="5">
+              <button id = "eye" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+              </button>
+            </mat-form-field>
+          
+            
+          <br>
+          <ion-button  color="warning"  (click)="login()" [disabled]="signinForm.invalid">Ingresar</ion-button>
+          <!--<ion-button  color="warning" (click)="pasa()" [disabled]="signinForm.invalid">Ingresar(Estudiante)</ion-button>-->
+          <br>
+          <ion-label id="lost" (click)="recovery()">¿Olvidó su contraseña?</ion-label>
+          <br>
+          <ion-label id="lost" (click)="newuser()">¿Nuevo Usuario?</ion-label>
+        </ion-card-content>  
+      </ion-card>
+    </div>
+  </form>
+
+
+
+
+  
+</ion-content>
+<app-footer class="ion-text-center"></app-footer>
+
+
+

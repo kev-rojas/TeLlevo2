@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-button size="small" slot="start" mode="md">
+      <ion-back-button></ion-back-button>
+    </ion-button>
+
+    <ion-title class="">
+      TeLlevo
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding class = "background" [fullscreen]="true">
+  
+  <div>
+    <img src='/assets/icon/duoc.jpg' id="duoc">
+  </div>
+
+  <form [formGroup]="signinForm">
+    <div class="ion-padding-vertical">
+      <ion-card id = "carta" class="ion-text-center">
+        <ion-card-title>
+          <ion-label>
+            <h3 id ="welcome">¿Olvido su contraseña?</h3>
+          </ion-label>
+        </ion-card-title>
+  
+        <ion-card-content id = "carta">
+          <mat-form-field appearance="legacy">
+            <mat-label id = "user_str">Usuario</mat-label>
+            <input isRequired = "true" id = "user_in_str" matInput type="text" formControlName="usuario">
+         </mat-form-field>
+  
+          <mat-form-field appearance="legacy">
+            <mat-label id = "correo_str">Correo Electronico</mat-label>
+            <input isRequired = "true" id = "correo_in_str" matInput type="text"  formControlName="email">
+         </mat-form-field>
+         
+  
+          <ion-button (click)="alerta()" color="warning" [disabled]="signinForm.invalid">Recuperar</ion-button>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </form>
+
+</ion-content>
+<app-footer class="ion-text-center"></app-footer>

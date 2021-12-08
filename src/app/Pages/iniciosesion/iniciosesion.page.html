@@ -1,0 +1,66 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+
+    <ion-button color="primary" size="small" slot="start" mode="md">
+      <ion-back-button></ion-back-button>
+    </ion-button>
+    <ion-title class="ion-padding-top ion-text-center">
+      Registrarse
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding class = "background" [fullscreen]="true">
+  <div>
+    <img src='/assets/icon/duoc.jpg' id="duoc">
+  </div>
+  <form [formGroup]="signinForm">
+    <div class="ion-padding-vertical">
+      <ion-card class="ion-text-center" id= "carta">
+        <ion-card-title>
+          <ion-label>
+            <h3 id = "letras">Ingrese sus Datos</h3>
+          </ion-label>
+        </ion-card-title>
+        <ion-card-content>
+
+          <mat-form-field appearance="legacy">
+            <mat-label id="letras">Nombre</mat-label>
+            <input id="campoLetra" type="text" matInput [(ngModel)]="nombre" formControlName="nombreusu">
+          </mat-form-field>
+
+          <mat-form-field appearance="legacy">
+            <mat-label id="letras">Contraseña</mat-label>
+            <input matInput id="campoLetra" [(ngModel)]="contra" formControlName="contraseña">
+          </mat-form-field>
+
+          <mat-form-field appearance="legacy">
+            <mat-label id="letras">Email</mat-label>
+            <input matInput id="campoLetra" [(ngModel)]="Email" formControlName="email">
+          </mat-form-field>
+
+          <mat-form-field appearance="legacy">
+            <mat-label id="letras">Tipo Usuario</mat-label>
+            <input matInput id="campoLetra" [(ngModel)]="tipo" formControlName="tipousu">
+          </mat-form-field>
+
+          <mat-form-field appearance="legacy">
+            <mat-label id="letras">N° Contacto</mat-label>
+            <input matInput id="campoLetra" [(ngModel)]="Numero" formControlName="numero">
+          </mat-form-field>
+
+          <ion-button shape="block" (click)="guardar()" [disabled]="signinForm.invalid" color="warning">Guardar</ion-button>
+         <!-- <ion-button shape="block" (click)="selection()" color="warning">Inicio</ion-button> -->
+          
+          
+  
+          <!--<ion-input type="text" placeholder="contraseña" [(ngModel)]="contra" ></ion-input>
+          <ion-input type="text" placeholder="tipo" [(ngModel)]="tipo" ></ion-input>
+          <ion-button shape="block" (click)="guardar()" >guardar</ion-button>
+          <ion-button shape="block" (click)="selection()" >Inicio</ion-button>-->
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </form>
+</ion-content>
+<app-footer class="ion-text-center"></app-footer>

@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar  class="center">
+
+    <app-btn></app-btn>
+
+    <ion-title class ="ion-text-center">
+      TeLlevo
+    </ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content  padding class = "background" [fullscreen]="true">
+
+  <div>
+    <img src='/assets/icon/duoc.jpg' id="duoc">
+  </div>
+  
+  <form [formGroup]="signinForm">
+    <div class="ion-padding-vertical">
+      <ion-card id = "carta" class="ion-text-center">
+        <ion-card-title>
+          <ion-label>
+            <h3 id ="letras">Bienvenido  {{nombreUsu.name}}</h3>
+          </ion-label>
+        </ion-card-title>
+        
+        <ion-card-content>
+  
+          <mat-form-field  >
+            <mat-label id="letras">destino</mat-label>
+            <input [(ngModel)]="viaje.strDestino" formControlName="destinito" matInput>
+          </mat-form-field>
+
+          <mat-form-field  >
+            <mat-label id="letras">Precio</mat-label>
+            <input pattern="[0-9]*" [(ngModel)]="viaje.strPrecio" formControlName="precito" matInput placeholder="$">
+          </mat-form-field>
+
+          <mat-form-field  >
+            <mat-label id="letras">Hora</mat-label>
+            <input [(ngModel)]="viaje.strHora" formControlName="horita" matInput >
+          </mat-form-field>
+
+          <div id="map"></div>
+          <br>
+          <ion-button (click)="guardarViaje()" [disabled]="signinForm.invalid" color = "warning">Agendar</ion-button>
+          
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </form>
+</ion-content>
+<app-footer class="ion-text-center"></app-footer>

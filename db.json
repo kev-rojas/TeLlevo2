@@ -1,0 +1,78 @@
+{
+  "users": [
+    {
+      "id": 0,
+      "name": "Vicente Gandolfo",
+      "password": "potoloco",
+      "tipo": "Pasajero",
+      "email": "Vicente.gandolfo@gmail.com",
+      "numero": "111222333",
+      "auto": {
+        "patente": "",
+        "marca": ""
+      }
+    },
+    {
+      "id": 1,
+      "name": "Kevin Rojas",
+      "password": "rojas",
+      "tipo": "Conductor",
+      "email": "Kevin.rojas@gmail.com",
+      "numero": "333222111",
+      "auto": {
+        "patente": "hzkk22",
+        "marca": "chevrolte"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Carlos Perez",
+      "password": "papas",
+      "tipo": "Conductor",
+      "email": "Carlos.Perez@gmail.com",
+      "numero": "222555888",
+      "auto": {
+        "patente": "TRNT44",
+        "marca": "D-lorean"
+      }
+    }
+  ],
+  "viajes": [
+    {
+      "id": 0,
+      "id_conductor": 1,
+      "comienzo": "Duoc Uc Viña",
+      "destino": "Placilla Curauma",
+      "precio": "2000",
+      "numero": "333222111",
+      "hora": "13:30"
+    },
+    {
+      "id": 1,
+      "id_conductor": 1,
+      "comienzo": "Duoc Uc Viña",
+      "destino": "concon",
+      "precio": "5000",
+      "numero": "333222111",
+      "hora": "15:30"
+    },
+    {
+      "id": 2,
+      "id_conductor": 1,
+      "comienzo": "Duoc UC Viña",
+      "destino": "Viña del mar",
+      "precio": "1500",
+      "numero": "333222111",
+      "hora": "15:50"
+    },
+    {
+      "id": 3,
+      "id_conductor": 2,
+      "comienzo": "Duoc UC Viña",
+      "destino": "Valparaizo",
+      "precio": "5000",
+      "numero": "222555888",
+      "hora": "15:50"
+    }
+  ]
+} 
